@@ -1,0 +1,46 @@
+# Experimento v2: variantes PRE-REGISTRADAS el 2026-11-09, antes de ver resultados completos.
+# (Solo se han corrido pruebas mínimas de 1 trimestre para validar el código.)
+# Revisión adversarial de Codex incorporada el mismo día, también antes de cualquier corrida completa:
+# +v2b (ablación de datos externos sin análisis técnico), +v6 (meta-etiqueta alineada con la operación),
+# objetivo de volatilidad con su sentido correcto, puerta más estricta y bootstrap pareado.
+#
+# Todas se evalúan con walk-forward purgado sobre el MISMO tramo de prueba, con el mismo tratamiento de
+# stops y costes, y se reportan todas (también las que fallen). El Deflated Sharpe Ratio corrige por TODOS
+# los intentos acumulados sobre el periodo de desarrollo. El holdout final sigue sellado.
+
+test_start: "2022-01-01"   # desde aquí existen todas las fuentes externas (OI de ETH ~2021-11, DVOL 2021-03)
+
+# Grupos: base = 39 actuales; ta = análisis técnico ampliado (ta_); ext = otras plataformas (ext_).
+# label: forward (retorno a `horizon` velas) o triple_barrier (barreras por ATR, alineadas con el stop de 3 ATR)
+variants:
+  v0_base_h12:            {features: [base],          horizon: 12, label: forward, primary: none,      sizing: fixed}
+  v1_base_h24:            {features: [base],          horizon: 24, label: forward, primary: none,      sizing: fixed}
+  v2_ta_h24:              {features: [base, ta],      horizon: 24, label: forward, primary: none,      sizing: fixed}
+  v2b_ext_h24:            {features: [base, ext],     horizon: 24, label: forward, primary: none,      sizing: fixed}
+  v3_ta_ext_h24:          {features: [base, ta, ext], horizon: 24, label: forward, primary: none,      sizing: fixed}
+  v4_meta_ema_h24:        {features: [base, ta, ext], horizon: 24, label: forward, primary: ema_cross, sizing: fixed}
+  v5_meta_ema_h24_vt:     {features: [base, ta, ext], horizon: 24, label: forward, primary: ema_cross, sizing: vol_target}
+  v6_meta_ema_tb_vt:      {features: [base, ta, ext], horizon: 24, label: triple_barrier, primary: ema_cross, sizing: vol_target}
+
+triple_barrier: {pt_atr_mult: 3.0, sl_atr_mult: 3.0, max_bars: 24}   # sl = stop del backtest (3 ATR)
+
+# Referencias sin ML en el mismo tramo (también cuentan como intentos para el DSR)
+rule_benchmarks: [buy_and_hold, ema_cross_24_168, ema_cross_vol_target]
+
+sizing:
+  vol_target_annual: 0.30     # volatilidad anual objetivo que aporta cada posición (peso x volatilidad)
+  max_weight: 0.5             # nunca más del 50 % por activo (sin apalancamiento)
+
+# Escenarios de costes (bps por lado: comisión + medio spread + slippage)
+cost_scenarios:
+  taker_base: {fee_bps: 10.0, half_spread_bps: 1.0, slippage_bps: 2.0}
+  taker_bnb:  {fee_bps: 7.5,  half_spread_bps: 1.0, slippage_bps: 2.0}
+  stress_x2:  {fee_bps: 20.0, half_spread_bps: 2.0, slippage_bps: 4.0}
+
+# Puerta de promoción v2 (todas deben cumplirse con costes taker_base, en una corrida COMPLETA)
+gate:
+  min_dsr: 0.95                 # Deflated Sharpe sobre todos los intentos acumulados
+  must_beat: [buy_and_hold, ema_cross_vol_target]   # Sharpe mayor que estas referencias...
+  bootstrap_block: 168          # ...y el IC95 % inferior de la diferencia de Sharpe (bootstrap pareado) > 0
+  max_drawdown_not_worse_than: buy_and_hold
+  positive_under: stress_x2

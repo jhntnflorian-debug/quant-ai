@@ -1,0 +1,58 @@
+{
+  "session": "20261110T031249Z_8daad3c8",
+  "entorno": "Colab",
+  "smoke": true,
+  "etapas": {
+    "pruebas": true,
+    "ml_v1": false,
+    "benchmark": false,
+    "secuencias_v1": false,
+    "rl": false,
+    "datos_externos": true,
+    "experimento_v2": true,
+    "secuencias_v2": true,
+    "cnn": true
+  },
+  "elapsed_seconds": 350.45280494300005,
+  "units_per_hour": null,
+  "estimated_units": null,
+  "steps": [
+    {
+      "step": "pruebas",
+      "seconds": 35.25528025700004,
+      "status": "finished"
+    },
+    {
+      "step": "datos",
+      "seconds": 5.760807331000024,
+      "status": "finished"
+    },
+    {
+      "step": "datos_externos",
+      "seconds": 42.104468440999995,
+      "status": "finished"
+    },
+    {
+      "step": "experimento_v2",
+      "seconds": 43.82989656500001,
+      "status": "finished"
+    },
+    {
+      "step": "secuencia_v2_gru",
+      "seconds": 17.496633065000083,
+      "status": "finished"
+    },
+    {
+      "step": "secuencia_v2_tcn",
+      "seconds": 16.770131949000074,
+      "status": "finished"
+    },
+    {
+      "step": "chart_cnn",
+      "seconds": 13.742898833000027,
+      "status": "finished"
+    }
+  ],
+  "fallos": [],
+  "todo_bien": true
+}

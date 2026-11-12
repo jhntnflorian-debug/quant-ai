@@ -1,0 +1,52 @@
+{
+  "session": "20261109T014949Z_c80004e9",
+  "steps": [
+    {
+      "step": "datos",
+      "seconds": 1.6791491760013741,
+      "status": "finished"
+    },
+    {
+      "step": "ml_cpu",
+      "seconds": 164.72676648299966,
+      "status": "finished"
+    },
+    {
+      "step": "benchmark",
+      "seconds": 15.027746434001529,
+      "status": "finished"
+    },
+    {
+      "step": "secuencia_gru",
+      "seconds": 76.15823766500034,
+      "status": "finished"
+    },
+    {
+      "step": "secuencia_tcn",
+      "seconds": 93.1805975440002,
+      "status": "finished"
+    },
+    {
+      "step": "evaluacion_gru",
+      "seconds": 5.993112514999666,
+      "status": "finished"
+    },
+    {
+      "step": "evaluacion_tcn",
+      "seconds": 5.891277353999612,
+      "status": "finished"
+    },
+    {
+      "step": "rl_ppo_BTCUSDT_cpu",
+      "seconds": 1102.3760469050012,
+      "status": "finished"
+    },
+    {
+      "step": "rl_ppo_ETHUSDT_cpu",
+      "seconds": 1098.1652561669998,
+      "status": "finished"
+    }
+  ],
+  "units_per_hour": null,
+  "elapsed_seconds": 2569.849801388
+}

@@ -1,0 +1,358 @@
+{
+  "run_id": "20261108T232302Z_baselines",
+  "created_at": "2026-11-08T23:23:08.900734+00:00",
+  "tag": "baselines",
+  "kind": "baselines_only",
+  "is_smoke": false,
+  "final_holdout_used": false,
+  "period": {
+    "start": "2020-01-01 00:00:00+00:00",
+    "end": "2025-10-31 23:00:00+00:00"
+  },
+  "final_holdout_start": "2025-11-01 00:00:00+00:00",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "strategies": {
+    "buy_and_hold": {
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2025-10-31 23:00:00+00:00",
+      "bars": 51113,
+      "total_return": 21.528212131658666,
+      "cagr": 0.7054601108998404,
+      "ann_volatility": 0.7337090462422212,
+      "sharpe": 1.096099144254635,
+      "sortino": 1.523044040130394,
+      "max_drawdown": -0.7985332963362795,
+      "calmar": 0.8834448283328139,
+      "sharpe_ci95": [
+        0.326871033255521,
+        1.9348502645064904
+      ],
+      "exposure_time": 0.9999804355056443,
+      "avg_gross_exposure": 0.999980350180137,
+      "n_fills": 2,
+      "turnover_annual": 0.014946285453031364,
+      "fees_paid": 9.990005110902459,
+      "impact_paid": 2.996102702459196,
+      "costs_pct_initial": 0.0012986107813361656,
+      "partial_fills": 2,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": false,
+      "risk_engine": false,
+      "open_positions_at_end": {
+        "BTCUSDT": {
+          "qty": 0.6966600000000001,
+          "mark": 109608.01
+        },
+        "ETHUSDT": {
+          "qty": 38.7014,
+          "mark": 3847.99
+        }
+      }
+    },
+    "price_above_ema_fast": {
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2025-10-31 23:00:00+00:00",
+      "bars": 51113,
+      "total_return": -0.956867704177819,
+      "cagr": -0.4165265461224318,
+      "ann_volatility": 0.36424131152832495,
+      "sharpe": -1.2968796295469667,
+      "sortino": -1.8551574506162787,
+      "max_drawdown": -0.9691561975917529,
+      "calmar": -0.42978267812500676,
+      "sharpe_ci95": [
+        -2.1824992446416736,
+        -0.5386289975165934
+      ],
+      "exposure_time": 0.4873711188934322,
+      "avg_gross_exposure": 0.3977371930911809,
+      "n_fills": 8814,
+      "turnover_annual": 770.4136957600173,
+      "fees_paid": 22214.006429554585,
+      "impact_paid": 6664.203666723606,
+      "costs_pct_initial": 2.887821009627819,
+      "partial_fills": 4410,
+      "n_trades": 4404,
+      "win_rate": 0.17506811989100818,
+      "avg_win": 92.02735790043353,
+      "avg_loss": -22.163988434630458,
+      "payoff_ratio": 4.152111799365677,
+      "profit_factor": 0.8811665833501067,
+      "expectancy": -2.172724123927836,
+      "expectancy_pct": -0.0012479173487846028,
+      "avg_bars_held": 9.223433242506813,
+      "cost_multiplier": 1.0,
+      "stop_loss": false,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ema_cross_24_168": {
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2025-10-31 23:00:00+00:00",
+      "bars": 51113,
+      "total_return": 6.50226563654349,
+      "cagr": 0.4125302744851793,
+      "ann_volatility": 0.4385765646891263,
+      "sharpe": 1.0072776563649084,
+      "sortino": 1.4026579990166623,
+      "max_drawdown": -0.555726091024275,
+      "calmar": 0.7423266266387327,
+      "sharpe_ci95": [
+        0.08838119568924369,
+        1.8215821168909567
+      ],
+      "exposure_time": 0.6274724629741945,
+      "avg_gross_exposure": 0.543953028770194,
+      "n_fills": 1020,
+      "turnover_annual": 81.98502669023561,
+      "fees_paid": 23549.429636032954,
+      "impact_paid": 7064.837498132197,
+      "costs_pct_initial": 3.061426713416515,
+      "partial_fills": 532,
+      "n_trades": 488,
+      "win_rate": 0.25614754098360654,
+      "avg_win": 2560.7124794207307,
+      "avg_loss": -702.662268766271,
+      "payoff_ratio": 3.64430053134461,
+      "profit_factor": 1.2549244253941496,
+      "expectancy": 133.24314828982568,
+      "expectancy_pct": 0.011366059321832767,
+      "avg_bars_held": 113.76229508196721,
+      "cost_multiplier": 1.0,
+      "stop_loss": false,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "tsmom_168": {
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2025-10-31 23:00:00+00:00",
+      "bars": 51113,
+      "total_return": 1.3612913997620906,
+      "cagr": 0.15865324401462977,
+      "ann_volatility": 0.4375792103985756,
+      "sharpe": 0.5555721162766604,
+      "sortino": 0.7808591467079162,
+      "max_drawdown": -0.6897070005826935,
+      "calmar": 0.23002991687860616,
+      "sharpe_ci95": [
+        -0.4251936425273859,
+        1.4135075320170487
+      ],
+      "exposure_time": 0.6389176921722458,
+      "avg_gross_exposure": 0.5476986636231479,
+      "n_fills": 3480,
+      "turnover_annual": 292.8271542603013,
+      "fees_paid": 51537.90769321753,
+      "impact_paid": 15461.379563061659,
+      "costs_pct_initial": 6.6999287256279185,
+      "partial_fills": 1755,
+      "n_trades": 1725,
+      "win_rate": 0.22666666666666666,
+      "avg_win": 664.064548495642,
+      "avg_loss": -184.43502583521382,
+      "payoff_ratio": 3.6005338220786776,
+      "profit_factor": 1.0553288788851296,
+      "expectancy": 7.891544346446835,
+      "expectancy_pct": 0.001899247185293572,
+      "avg_bars_held": 32.415652173913045,
+      "cost_multiplier": 1.0,
+      "stop_loss": false,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "rsi_reversion": {
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2025-10-31 23:00:00+00:00",
+      "bars": 51113,
+      "total_return": -0.6251103006365806,
+      "cagr": -0.15477557926353525,
+      "ann_volatility": 0.38824092069540345,
+      "sharpe": -0.23697711838673474,
+      "sortino": -0.31974610534685055,
+      "max_drawdown": -0.7030352946660536,
+      "calmar": -0.22015335565343794,
+      "sharpe_ci95": [
+        -0.8570902844482834,
+        0.39468390595308056
+      ],
+      "exposure_time": 0.2705573924441923,
+      "avg_gross_exposure": 0.20998810182279654,
+      "n_fills": 1256,
+      "turnover_annual": 107.42955025481199,
+      "fees_paid": 3869.037721682924,
+      "impact_paid": 1160.7112065828828,
+      "costs_pct_initial": 0.5029748928265806,
+      "partial_fills": 628,
+      "n_trades": 628,
+      "win_rate": 0.6242038216560509,
+      "avg_win": 67.41633204929987,
+      "avg_loss": -138.4673947868278,
+      "payoff_ratio": 0.48687513875080923,
+      "profit_factor": 0.80870785758609,
+      "expectancy": -9.953985678926433,
+      "expectancy_pct": -0.002216415224456183,
+      "avg_bars_held": 34.37101910828026,
+      "cost_multiplier": 1.0,
+      "stop_loss": false,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ema_cross_24_168_cost2x": {
+      "start": "2020-01-01 00:00:00+00:00",
+      "end": "2025-10-31 23:00:00+00:00",
+      "bars": 51113,
+      "total_return": 2.959034561972617,
+      "cagr": 0.26595954385530507,
+      "ann_volatility": 0.43879051745871356,
+      "sharpe": 0.7573268003275242,
+      "sortino": 1.0529544051572788,
+      "max_drawdown": -0.6149883917143392,
+      "calmar": 0.4324627057007,
+      "sharpe_ci95": [
+        -0.18142954942719391,
+        1.5846739218133894
+      ],
+      "exposure_time": 0.6274724629741945,
+      "avg_gross_exposure": 0.5439929405579393,
+      "n_fills": 1017,
+      "turnover_annual": 82.10833526957029,
+      "fees_paid": 32906.37299165972,
+      "impact_paid": 9871.937950214131,
+      "costs_pct_initial": 4.277831094187385,
+      "partial_fills": 529,
+      "n_trades": 488,
+      "win_rate": 0.2459016393442623,
+      "avg_win": 1891.653542202725,
+      "avg_loss": -536.4349984907631,
+      "payoff_ratio": 3.5263425159149038,
+      "profit_factor": 1.1498942986679033,
+      "expectancy": 60.635954138783156,
+      "expectancy_pct": 0.008877884676877282,
+      "avg_bars_held": 113.76229508196721,
+      "cost_multiplier": 2.0,
+      "stop_loss": false,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    }
+  },
+  "classification": {},
+  "folds": [],
+  "config": {
+    "project": {
+      "name": "quant-ai",
+      "mode": "paper",
+      "seed": 42
+    },
+    "compute": {
+      "n_jobs": 2
+    },
+    "market": {
+      "exchange": "binance",
+      "symbols": [
+        "BTCUSDT",
+        "ETHUSDT"
+      ],
+      "interval": "1h",
+      "history_start": "2018-01-01"
+    },
+    "splits": {
+      "final_holdout_start": "2025-11-01",
+      "walk_forward": {
+        "first_test_start": "2020-01-01",
+        "test_months": 3,
+        "min_train_months": 18,
+        "expanding": true,
+        "calibration_fraction": 0.2
+      },
+      "embargo_bars": 24
+    },
+    "costs": {
+      "fee_bps": 10.0,
+      "half_spread_bps": 1.0,
+      "slippage_bps": 2.0,
+      "max_participation": 0.01
+    },
+    "instrument_rules": {
+      "BTCUSDT": {
+        "lot_step": 1e-05,
+        "min_notional": 5.0,
+        "tick_size": 0.01
+      },
+      "ETHUSDT": {
+        "lot_step": 0.0001,
+        "min_notional": 5.0,
+        "tick_size": 0.01
+      }
+    },
+    "labeling": {
+      "method": "forward_net_return",
+      "horizon_bars": 12,
+      "cost_threshold_bps": 26.0,
+      "triple_barrier": {
+        "pt_atr_mult": 2.0,
+        "sl_atr_mult": 1.5,
+        "max_bars": 24
+      }
+    },
+    "features": {
+      "windows": [
+        6,
+        12,
+        24,
+        72,
+        168
+      ],
+      "include_cross_asset": true,
+      "include_calendar": true
+    },
+    "strategy": {
+      "enter_prob": 0.55,
+      "exit_prob": 0.45,
+      "max_uncertainty": 0.15,
+      "target_weight": 0.5,
+      "atr_stop_mult": 3.0
+    },
+    "backtest": {
+      "initial_cash": 10000.0,
+      "annualization_bars": 8760
+    },
+    "risk": {
+      "max_order_notional": 3000.0,
+      "max_position_weight": 0.5,
+      "max_gross_exposure": 1.0,
+      "max_daily_loss_pct": 0.03,
+      "max_drawdown_pct": 0.15,
+      "max_data_age_minutes": 90,
+      "max_volatility_pct": 0.04,
+      "ood_zscore": 6.0,
+      "ood_max_features": 3,
+      "max_api_errors": 5,
+      "kill_switch_file": "KILL_SWITCH"
+    },
+    "paths": {
+      "data_dir": "data",
+      "models_dir": "models",
+      "reports_dir": "reports",
+      "state_dir": "state"
+    }
+  },
+  "data": {
+    "BTCUSDT": {
+      "sha256": "f830f6b6ed3c6888b944d2ddc6bc17b4f60e9241e85242dda541fdff91a865be",
+      "rows": 77495
+    },
+    "ETHUSDT": {
+      "sha256": "4f1f4aecab3527de23905e73f5ef29324eaef92922ad98498c7e373fafdce79a",
+      "rows": 77495
+    }
+  },
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0"
+  },
+  "seconds": 6.4
+}

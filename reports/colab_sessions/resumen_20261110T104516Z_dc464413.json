@@ -1,0 +1,63 @@
+{
+  "session": "20261110T104516Z_dc464413",
+  "entorno": "Colab",
+  "smoke": false,
+  "etapas": {
+    "pruebas": true,
+    "ml_v1": false,
+    "benchmark": false,
+    "secuencias_v1": false,
+    "rl": false,
+    "datos_externos": true,
+    "experimento_v2": true,
+    "secuencias_v2": true,
+    "cnn": true
+  },
+  "elapsed_seconds": 4606.863060937,
+  "units_per_hour": null,
+  "estimated_units": null,
+  "steps": [
+    {
+      "step": "pruebas",
+      "seconds": 39.78267302800003,
+      "status": "finished"
+    },
+    {
+      "step": "datos",
+      "seconds": 5.775124035999966,
+      "status": "finished"
+    },
+    {
+      "step": "datos_externos",
+      "seconds": 339.63044103699997,
+      "status": "finished"
+    },
+    {
+      "step": "experimento_v2",
+      "seconds": 1422.3230843860001,
+      "status": "finished"
+    },
+    {
+      "step": "secuencia_v2_gru",
+      "seconds": 358.81912248399976,
+      "status": "finished"
+    },
+    {
+      "step": "secuencia_v2_tcn",
+      "seconds": 357.3055691149998,
+      "status": "finished"
+    },
+    {
+      "step": "chart_cnn",
+      "seconds": 1785.4719871939997,
+      "status": "finished"
+    },
+    {
+      "step": "consolidacion_v2",
+      "seconds": 52.39317984199988,
+      "status": "finished"
+    }
+  ],
+  "fallos": [],
+  "todo_bien": true
+}

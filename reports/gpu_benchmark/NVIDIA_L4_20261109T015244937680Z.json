@@ -1,0 +1,198 @@
+{
+  "created_at": "2026-11-09T01:52:44.928722+00:00",
+  "device": "cuda",
+  "gpu_name": "NVIDIA L4",
+  "gpu_vram_gb": 22.0343017578125,
+  "torch_version": "2.14.1+cu130",
+  "cuda_version": "13.0",
+  "cudnn_version": 92800,
+  "amp_dtype": "bfloat16",
+  "smoke": false,
+  "shape": {
+    "n_features": 39,
+    "window": 64,
+    "hidden": 64,
+    "layers": 2
+  },
+  "rows_per_symbol": {
+    "BTCUSDT": 68544,
+    "ETHUSDT": 68544
+  },
+  "seed": 42,
+  "matmul": [
+    {
+      "mode": "fp32",
+      "status": "ok",
+      "size": 4096,
+      "iterations": 30,
+      "seconds": 0.33123308200083557,
+      "tflops": 12.447937202569637,
+      "gpu_mem_peak_gb": 0.21875
+    },
+    {
+      "mode": "tf32",
+      "status": "ok",
+      "size": 4096,
+      "iterations": 30,
+      "seconds": 0.14705033100108267,
+      "tflops": 28.039165747472158,
+      "gpu_mem_peak_gb": 0.21875
+    },
+    {
+      "mode": "fp16",
+      "status": "ok",
+      "size": 4096,
+      "iterations": 30,
+      "seconds": 0.06695146899983229,
+      "tflops": 61.584438187164025,
+      "gpu_mem_peak_gb": 0.125
+    },
+    {
+      "mode": "bf16",
+      "status": "ok",
+      "size": 4096,
+      "iterations": 30,
+      "seconds": 0.06379863599977398,
+      "tflops": 64.62784884890968,
+      "gpu_mem_peak_gb": 0.125
+    }
+  ],
+  "training": [
+    {
+      "model": "gru",
+      "batch_size": 256,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.11221476500031713,
+      "samples_per_sec": 68440.19144876608,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.11583280563354492,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 1.000596265883687,
+        "ETHUSDT": 1.000596265883687
+      },
+      "estimated_epoch_seconds": 2.001192531767374
+    },
+    {
+      "model": "gru",
+      "batch_size": 1024,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.11950559000069916,
+      "samples_per_sec": 257059.1049324159,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.26677513122558594,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 0.2664017678658164,
+        "ETHUSDT": 0.2664017678658164
+      },
+      "estimated_epoch_seconds": 0.5328035357316327
+    },
+    {
+      "model": "gru",
+      "batch_size": 4096,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.5558973409988539,
+      "samples_per_sec": 221048.00821533942,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.8683261871337891,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 0.3098014795649619,
+        "ETHUSDT": 0.3098014795649619
+      },
+      "estimated_epoch_seconds": 0.6196029591299238
+    },
+    {
+      "model": "tcn",
+      "batch_size": 256,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.13017020699953719,
+      "samples_per_sec": 58999.67570941411,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.09964513778686523,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 1.1607012949915763,
+        "ETHUSDT": 1.1607012949915763
+      },
+      "estimated_epoch_seconds": 2.3214025899831525
+    },
+    {
+      "model": "tcn",
+      "batch_size": 1024,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.13202214800003276,
+      "samples_per_sec": 232688.23046260676,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.19469165802001953,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 0.2943036691793699,
+        "ETHUSDT": 0.2943036691793699
+      },
+      "estimated_epoch_seconds": 0.5886073383587398
+    },
+    {
+      "model": "tcn",
+      "batch_size": 4096,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.6797372220007674,
+      "samples_per_sec": 180775.74101107748,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.5764918327331543,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 0.3788174210598515,
+        "ETHUSDT": 0.3788174210598515
+      },
+      "estimated_epoch_seconds": 0.757634842119703
+    },
+    {
+      "model": "transformer",
+      "batch_size": 256,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.23151182399851677,
+      "samples_per_sec": 33173.25166100028,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.17724180221557617,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 2.064343908755524,
+        "ETHUSDT": 2.064343908755524
+      },
+      "estimated_epoch_seconds": 4.128687817511048
+    },
+    {
+      "model": "transformer",
+      "batch_size": 1024,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 0.5341649350011721,
+      "samples_per_sec": 57510.32684302385,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 0.4717082977294922,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 1.1907600557882574,
+        "ETHUSDT": 1.1907600557882574
+      },
+      "estimated_epoch_seconds": 2.3815201115765148
+    },
+    {
+      "model": "transformer",
+      "batch_size": 4096,
+      "status": "ok",
+      "steps": 30,
+      "seconds": 2.6865066419995856,
+      "samples_per_sec": 45739.69707684756,
+      "amp_dtype": "bfloat16",
+      "gpu_mem_peak_gb": 1.6663990020751953,
+      "estimated_epoch_seconds_by_symbol": {
+        "BTCUSDT": 1.4971896268780407,
+        "ETHUSDT": 1.4971896268780407
+      },
+      "estimated_epoch_seconds": 2.9943792537560814
+    }
+  ],
+  "estimate_scope": "Solo ajuste con datos sintéticos residentes en GPU; excluye validación, carga de datos, checkpoints y compilación. Filas antes de purga/huecos."
+}

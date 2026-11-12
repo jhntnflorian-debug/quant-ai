@@ -1,0 +1,2243 @@
+{
+  "run_id": "20261110T031705Z_v2_smoke_colab",
+  "created_at": "2026-11-10T03:17:42.950197+00:00",
+  "kind": "v2",
+  "is_smoke": true,
+  "final_holdout_used": false,
+  "period": {
+    "start": "2022-01-01 00:00:00+00:00",
+    "end": "2022-03-31 23:00:00+00:00"
+  },
+  "final_holdout_start": "2025-11-01 00:00:00+00:00",
+  "symbols": [
+    "BTCUSDT"
+  ],
+  "variants": {
+    "v0_base_h12": {
+      "features": [
+        "base"
+      ],
+      "horizon": 12,
+      "label": "forward",
+      "primary": "none",
+      "sizing": "fixed"
+    },
+    "v1_base_h24": {
+      "features": [
+        "base"
+      ],
+      "horizon": 24,
+      "label": "forward",
+      "primary": "none",
+      "sizing": "fixed"
+    },
+    "v2_ta_h24": {
+      "features": [
+        "base",
+        "ta"
+      ],
+      "horizon": 24,
+      "label": "forward",
+      "primary": "none",
+      "sizing": "fixed"
+    },
+    "v2b_ext_h24": {
+      "features": [
+        "base",
+        "ext"
+      ],
+      "horizon": 24,
+      "label": "forward",
+      "primary": "none",
+      "sizing": "fixed"
+    },
+    "v3_ta_ext_h24": {
+      "features": [
+        "base",
+        "ta",
+        "ext"
+      ],
+      "horizon": 24,
+      "label": "forward",
+      "primary": "none",
+      "sizing": "fixed"
+    },
+    "v4_meta_ema_h24": {
+      "features": [
+        "base",
+        "ta",
+        "ext"
+      ],
+      "horizon": 24,
+      "label": "forward",
+      "primary": "ema_cross",
+      "sizing": "fixed"
+    },
+    "v5_meta_ema_h24_vt": {
+      "features": [
+        "base",
+        "ta",
+        "ext"
+      ],
+      "horizon": 24,
+      "label": "forward",
+      "primary": "ema_cross",
+      "sizing": "vol_target"
+    },
+    "v6_meta_ema_tb_vt": {
+      "features": [
+        "base",
+        "ta",
+        "ext"
+      ],
+      "horizon": 24,
+      "label": "triple_barrier",
+      "primary": "ema_cross",
+      "sizing": "vol_target"
+    }
+  },
+  "strategies": {
+    "ml_v0_base_h12": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": -0.036166923990527344,
+      "cagr": -0.1388308474671921,
+      "ann_volatility": 0.05209089824114909,
+      "sharpe": -2.842945507586825,
+      "sortino": -2.946510711796064,
+      "max_drawdown": -0.04023058850672445,
+      "calmar": -3.450877867321947,
+      "sharpe_ci95": [
+        -6.29085269187606,
+        0.0
+      ],
+      "exposure_time": 0.004629629629629629,
+      "avg_gross_exposure": 0.002305108522049019,
+      "n_fills": 6,
+      "turnover_annual": 12.101094226550217,
+      "fees_paid": 29.22585981001232,
+      "impact_paid": 8.767728812193234,
+      "costs_pct_initial": 0.003799358862220555,
+      "partial_fills": 3,
+      "n_trades": 3,
+      "win_rate": 0.3333333333333333,
+      "avg_win": 60.739092224318554,
+      "avg_loss": -211.2041660647946,
+      "payoff_ratio": 0.2875847259835046,
+      "profit_factor": 0.1437923629917523,
+      "expectancy": -120.55641330175689,
+      "expectancy_pct": -0.024220488595128254,
+      "avg_bars_held": 3.3333333333333335,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ml_v1_base_h24": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "ann_volatility": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": NaN,
+      "sharpe_ci95": [
+        0.0,
+        0.0
+      ],
+      "exposure_time": 0.0,
+      "avg_gross_exposure": 0.0,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ml_v2_ta_h24": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": 0.013731130305612238,
+      "cagr": 0.05689368333525335,
+      "ann_volatility": 0.046349527738580074,
+      "sharpe": 1.2170047206639494,
+      "sortino": 1.829915962448037,
+      "max_drawdown": -0.022904109707743148,
+      "calmar": 2.48399453465853,
+      "sharpe_ci95": [
+        0.0,
+        2.4032590196171997
+      ],
+      "exposure_time": 0.01712962962962963,
+      "avg_gross_exposure": 0.008627744973058982,
+      "n_fills": 2,
+      "turnover_annual": 4.103460389995163,
+      "fees_paid": 10.150374306359042,
+      "impact_paid": 3.045125837519417,
+      "costs_pct_initial": 0.0013195500143878458,
+      "partial_fills": 1,
+      "n_trades": 1,
+      "win_rate": 1.0,
+      "avg_win": 137.3113030561221,
+      "avg_loss": 0.0,
+      "payoff_ratio": NaN,
+      "profit_factor": NaN,
+      "expectancy": 137.3113030561221,
+      "expectancy_pct": 0.027454264202624843,
+      "avg_bars_held": 37.0,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ml_v2b_ext_h24": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "ann_volatility": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": NaN,
+      "sharpe_ci95": [
+        0.0,
+        0.0
+      ],
+      "exposure_time": 0.0,
+      "avg_gross_exposure": 0.0,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ml_v3_ta_ext_h24": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "ann_volatility": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": NaN,
+      "sharpe_ci95": [
+        0.0,
+        0.0
+      ],
+      "exposure_time": 0.0,
+      "avg_gross_exposure": 0.0,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ml_v4_meta_ema_h24": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "ann_volatility": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": NaN,
+      "sharpe_ci95": [
+        0.0,
+        0.0
+      ],
+      "exposure_time": 0.0,
+      "avg_gross_exposure": 0.0,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ml_v5_meta_ema_h24_vt": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "ann_volatility": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": NaN,
+      "sharpe_ci95": [
+        0.0,
+        0.0
+      ],
+      "exposure_time": 0.0,
+      "avg_gross_exposure": 0.0,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ml_v6_meta_ema_tb_vt": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "ann_volatility": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "max_drawdown": 0.0,
+      "calmar": NaN,
+      "sharpe_ci95": [
+        0.0,
+        0.0
+      ],
+      "exposure_time": 0.0,
+      "avg_gross_exposure": 0.0,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "buy_and_hold": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": -0.012928500145271027,
+      "cagr": -0.051428945064149745,
+      "ann_volatility": 0.3084298600004579,
+      "sharpe": -0.01702796936919978,
+      "sortino": -0.023848234888294007,
+      "max_drawdown": -0.15549098738039946,
+      "calmar": -0.330751935726872,
+      "sharpe_ci95": [
+        -3.9802509108790747,
+        4.167908126415428
+      ],
+      "exposure_time": 0.999537037037037,
+      "avg_gross_exposure": 0.4685740502900228,
+      "n_fills": 1,
+      "turnover_annual": 2.155767998223823,
+      "fees_paid": 5.001171863988721,
+      "impact_paid": 1.4999015887200504,
+      "costs_pct_initial": 0.0006501073452708771,
+      "partial_fills": 1,
+      "n_trades": 0,
+      "cost_multiplier": 1.0,
+      "stop_loss": false,
+      "risk_engine": false,
+      "open_positions_at_end": {
+        "BTCUSDT": {
+          "qty": 0.10716,
+          "mark": 45510.34
+        }
+      }
+    },
+    "ema_cross_24_168": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": -0.10873884086906271,
+      "cagr": -0.37317182621461076,
+      "ann_volatility": 0.16662074383893963,
+      "sharpe": -2.7198164227070243,
+      "sortino": -3.5542806327685805,
+      "max_drawdown": -0.12679082551835286,
+      "calmar": -2.9432084276523183,
+      "sharpe_ci95": [
+        -6.005358381359594,
+        0.6210819813947577
+      ],
+      "exposure_time": 0.26296296296296295,
+      "avg_gross_exposure": 0.133814186138656,
+      "n_fills": 20,
+      "turnover_annual": 40.36474131793772,
+      "fees_paid": 95.18486911668236,
+      "impact_paid": 28.555374006665126,
+      "costs_pct_initial": 0.012374024312334747,
+      "partial_fills": 10,
+      "n_trades": 10,
+      "win_rate": 0.1,
+      "avg_win": 338.02313112280564,
+      "avg_loss": -158.37905997927052,
+      "payoff_ratio": 2.1342665575048105,
+      "profit_factor": 0.23714072861164562,
+      "expectancy": -108.73884086906291,
+      "expectancy_pct": -0.022627491652527903,
+      "avg_bars_held": 56.8,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ema_cross_vol_target": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": -0.08394729433426418,
+      "cagr": -0.2993602271075869,
+      "ann_volatility": 0.12362568897519098,
+      "sharpe": -2.815813957483406,
+      "sortino": -3.6531012094466595,
+      "max_drawdown": -0.09885422772138208,
+      "calmar": -3.02829968943084,
+      "sharpe_ci95": [
+        -6.2423232179717845,
+        0.48076038210283084
+      ],
+      "exposure_time": 0.26296296296296295,
+      "avg_gross_exposure": 0.10186126389407106,
+      "n_fills": 22,
+      "turnover_annual": 31.46031651233859,
+      "fees_paid": 74.85264654994836,
+      "impact_paid": 22.4557271701694,
+      "costs_pct_initial": 0.009730837372011776,
+      "partial_fills": 12,
+      "n_trades": 10,
+      "win_rate": 0.1,
+      "avg_win": 273.0759459523645,
+      "avg_loss": -123.6165432550008,
+      "payoff_ratio": 2.209056642111835,
+      "profit_factor": 0.24545073801242615,
+      "expectancy": -83.94729433426426,
+      "expectancy_pct": -0.022955094633650162,
+      "avg_bars_held": 56.8,
+      "cost_multiplier": 1.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    },
+    "ema_cross_24_168_cost2x": {
+      "start": "2022-01-01 00:00:00+00:00",
+      "end": "2022-03-31 23:00:00+00:00",
+      "bars": 2160,
+      "total_return": -0.12027108685426502,
+      "cagr": -0.4054351977243761,
+      "ann_volatility": 0.16785379077155846,
+      "sharpe": -3.0133823799609822,
+      "sortino": -3.9065248837476485,
+      "max_drawdown": -0.13306025001663213,
+      "calmar": -3.0470046289083172,
+      "sharpe_ci95": [
+        -6.377838254640873,
+        0.3238382919563898
+      ],
+      "exposure_time": 0.26296296296296295,
+      "avg_gross_exposure": 0.13389751388183313,
+      "n_fills": 20,
+      "turnover_annual": 40.39781799496079,
+      "fees_paid": 189.27530929145513,
+      "impact_paid": 56.78224839224291,
+      "costs_pct_initial": 0.024605755768369805,
+      "partial_fills": 10,
+      "n_trades": 10,
+      "win_rate": 0.1,
+      "avg_win": 323.509642417584,
+      "avg_loss": -169.58005677335902,
+      "payoff_ratio": 1.9077104264090994,
+      "profit_factor": 0.2119678251565666,
+      "expectancy": -120.2710868542647,
+      "expectancy_pct": -0.025193103634118447,
+      "avg_bars_held": 56.8,
+      "cost_multiplier": 2.0,
+      "stop_loss": true,
+      "risk_engine": false,
+      "open_positions_at_end": {}
+    }
+  },
+  "scenarios": {
+    "taker_base": {
+      "ml_v0_base_h12": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.036166923990527344,
+        "cagr": -0.1388308474671921,
+        "ann_volatility": 0.05209089824114909,
+        "sharpe": -2.842945507586825,
+        "sortino": -2.946510711796064,
+        "max_drawdown": -0.04023058850672445,
+        "calmar": -3.450877867321947,
+        "sharpe_ci95": [
+          -6.29085269187606,
+          0.0
+        ],
+        "exposure_time": 0.004629629629629629,
+        "avg_gross_exposure": 0.002305108522049019,
+        "n_fills": 6,
+        "turnover_annual": 12.101094226550217,
+        "fees_paid": 29.22585981001232,
+        "impact_paid": 8.767728812193234,
+        "costs_pct_initial": 0.003799358862220555,
+        "partial_fills": 3,
+        "n_trades": 3,
+        "win_rate": 0.3333333333333333,
+        "avg_win": 60.739092224318554,
+        "avg_loss": -211.2041660647946,
+        "payoff_ratio": 0.2875847259835046,
+        "profit_factor": 0.1437923629917523,
+        "expectancy": -120.55641330175689,
+        "expectancy_pct": -0.024220488595128254,
+        "avg_bars_held": 3.3333333333333335,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v1_base_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v2_ta_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.013731130305612238,
+        "cagr": 0.05689368333525335,
+        "ann_volatility": 0.046349527738580074,
+        "sharpe": 1.2170047206639494,
+        "sortino": 1.829915962448037,
+        "max_drawdown": -0.022904109707743148,
+        "calmar": 2.48399453465853,
+        "sharpe_ci95": [
+          0.0,
+          2.4032590196171997
+        ],
+        "exposure_time": 0.01712962962962963,
+        "avg_gross_exposure": 0.008627744973058982,
+        "n_fills": 2,
+        "turnover_annual": 4.103460389995163,
+        "fees_paid": 10.150374306359042,
+        "impact_paid": 3.045125837519417,
+        "costs_pct_initial": 0.0013195500143878458,
+        "partial_fills": 1,
+        "n_trades": 1,
+        "win_rate": 1.0,
+        "avg_win": 137.3113030561221,
+        "avg_loss": 0.0,
+        "payoff_ratio": NaN,
+        "profit_factor": NaN,
+        "expectancy": 137.3113030561221,
+        "expectancy_pct": 0.027454264202624843,
+        "avg_bars_held": 37.0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v2b_ext_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v3_ta_ext_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v4_meta_ema_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v5_meta_ema_h24_vt": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v6_meta_ema_tb_vt": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "buy_and_hold": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.012928500145271027,
+        "cagr": -0.051428945064149745,
+        "ann_volatility": 0.3084298600004579,
+        "sharpe": -0.01702796936919978,
+        "sortino": -0.023848234888294007,
+        "max_drawdown": -0.15549098738039946,
+        "calmar": -0.330751935726872,
+        "sharpe_ci95": [
+          -3.9802509108790747,
+          4.167908126415428
+        ],
+        "exposure_time": 0.999537037037037,
+        "avg_gross_exposure": 0.4685740502900228,
+        "n_fills": 1,
+        "turnover_annual": 2.155767998223823,
+        "fees_paid": 5.001171863988721,
+        "impact_paid": 1.4999015887200504,
+        "costs_pct_initial": 0.0006501073452708771,
+        "partial_fills": 1,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": false,
+        "risk_engine": false,
+        "open_positions_at_end": {
+          "BTCUSDT": {
+            "qty": 0.10716,
+            "mark": 45510.34
+          }
+        }
+      },
+      "ema_cross_24_168": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.10873884086906271,
+        "cagr": -0.37317182621461076,
+        "ann_volatility": 0.16662074383893963,
+        "sharpe": -2.7198164227070243,
+        "sortino": -3.5542806327685805,
+        "max_drawdown": -0.12679082551835286,
+        "calmar": -2.9432084276523183,
+        "sharpe_ci95": [
+          -6.005358381359594,
+          0.6210819813947577
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.133814186138656,
+        "n_fills": 20,
+        "turnover_annual": 40.36474131793772,
+        "fees_paid": 95.18486911668236,
+        "impact_paid": 28.555374006665126,
+        "costs_pct_initial": 0.012374024312334747,
+        "partial_fills": 10,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 338.02313112280564,
+        "avg_loss": -158.37905997927052,
+        "payoff_ratio": 2.1342665575048105,
+        "profit_factor": 0.23714072861164562,
+        "expectancy": -108.73884086906291,
+        "expectancy_pct": -0.022627491652527903,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ema_cross_vol_target": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.08394729433426418,
+        "cagr": -0.2993602271075869,
+        "ann_volatility": 0.12362568897519098,
+        "sharpe": -2.815813957483406,
+        "sortino": -3.6531012094466595,
+        "max_drawdown": -0.09885422772138208,
+        "calmar": -3.02829968943084,
+        "sharpe_ci95": [
+          -6.2423232179717845,
+          0.48076038210283084
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.10186126389407106,
+        "n_fills": 22,
+        "turnover_annual": 31.46031651233859,
+        "fees_paid": 74.85264654994836,
+        "impact_paid": 22.4557271701694,
+        "costs_pct_initial": 0.009730837372011776,
+        "partial_fills": 12,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 273.0759459523645,
+        "avg_loss": -123.6165432550008,
+        "payoff_ratio": 2.209056642111835,
+        "profit_factor": 0.24545073801242615,
+        "expectancy": -83.94729433426426,
+        "expectancy_pct": -0.022955094633650162,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ema_cross_24_168_cost2x": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.12027108685426502,
+        "cagr": -0.4054351977243761,
+        "ann_volatility": 0.16785379077155846,
+        "sharpe": -3.0133823799609822,
+        "sortino": -3.9065248837476485,
+        "max_drawdown": -0.13306025001663213,
+        "calmar": -3.0470046289083172,
+        "sharpe_ci95": [
+          -6.377838254640873,
+          0.3238382919563898
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.13389751388183313,
+        "n_fills": 20,
+        "turnover_annual": 40.39781799496079,
+        "fees_paid": 189.27530929145513,
+        "impact_paid": 56.78224839224291,
+        "costs_pct_initial": 0.024605755768369805,
+        "partial_fills": 10,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 323.509642417584,
+        "avg_loss": -169.58005677335902,
+        "payoff_ratio": 1.9077104264090994,
+        "profit_factor": 0.2119678251565666,
+        "expectancy": -120.2710868542647,
+        "expectancy_pct": -0.025193103634118447,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 2.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      }
+    },
+    "taker_bnb": {
+      "ml_v0_base_h12": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.03544330370285753,
+        "cagr": -0.13620452979402775,
+        "ann_volatility": 0.05198848725110378,
+        "sharpe": -2.79007848305387,
+        "sortino": -2.8959917624319327,
+        "max_drawdown": -0.039629591514874885,
+        "calmar": -3.4369400386805316,
+        "sharpe_ci95": [
+          -6.251594129561288,
+          0.0
+        ],
+        "exposure_time": 0.004629629629629629,
+        "avg_gross_exposure": 0.0023048128317519176,
+        "n_fills": 6,
+        "turnover_annual": 12.098508346065728,
+        "fees_paid": 21.924653088243033,
+        "impact_paid": 8.7698320988257,
+        "costs_pct_initial": 0.0030694485187068737,
+        "partial_fills": 3,
+        "n_trades": 3,
+        "win_rate": 0.3333333333333333,
+        "avg_win": 63.20722514971789,
+        "avg_loss": -208.82013108914663,
+        "payoff_ratio": 0.30268741246376446,
+        "profit_factor": 0.15134370623188223,
+        "expectancy": -118.14434567619179,
+        "expectancy_pct": -0.023726049277959835,
+        "avg_bars_held": 3.3333333333333335,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v1_base_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v2_ta_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.013984889663271272,
+        "cagr": 0.05796754475050858,
+        "ann_volatility": 0.046344126381755175,
+        "sharpe": 1.2390542913111824,
+        "sortino": 1.8636870103574352,
+        "max_drawdown": -0.022901286846695457,
+        "calmar": 2.531191593666843,
+        "sharpe_ci95": [
+          0.0,
+          2.4356423290097724
+        ],
+        "exposure_time": 0.01712962962962963,
+        "avg_gross_exposure": 0.008626672900472428,
+        "n_fills": 2,
+        "turnover_annual": 4.103183630333921,
+        "fees_paid": 7.612780729769281,
+        "impact_paid": 3.045125837519417,
+        "costs_pct_initial": 0.00106579065672887,
+        "partial_fills": 1,
+        "n_trades": 1,
+        "win_rate": 1.0,
+        "avg_win": 139.8488966327119,
+        "avg_loss": 0.0,
+        "payoff_ratio": NaN,
+        "profit_factor": NaN,
+        "expectancy": 139.8488966327119,
+        "expectancy_pct": 0.02796163513961249,
+        "avg_bars_held": 37.0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v2b_ext_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v3_ta_ext_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v4_meta_ema_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v5_meta_ema_h24_vt": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v6_meta_ema_tb_vt": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "buy_and_hold": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.012803470848671172,
+        "cagr": -0.05094133955643443,
+        "ann_volatility": 0.30838956814070695,
+        "sharpe": -0.0154040456512511,
+        "sortino": -0.021573949754583547,
+        "max_drawdown": -0.1554717703304913,
+        "calmar": -0.32765652213354746,
+        "sharpe_ci95": [
+          -3.9785844485801856,
+          4.169638288685737
+        ],
+        "exposure_time": 0.999537037037037,
+        "avg_gross_exposure": 0.46851182722623397,
+        "n_fills": 1,
+        "turnover_annual": 2.155481821820415,
+        "fees_paid": 3.7508788979915404,
+        "impact_paid": 1.4999015887200504,
+        "costs_pct_initial": 0.0005250780486711591,
+        "partial_fills": 1,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": false,
+        "risk_engine": false,
+        "open_positions_at_end": {
+          "BTCUSDT": {
+            "qty": 0.10716,
+            "mark": 45510.34
+          }
+        }
+      },
+      "ema_cross_24_168": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.10650414470667924,
+        "cagr": -0.3667703843819683,
+        "ann_volatility": 0.1664058400268884,
+        "sharpe": -2.6624918554155763,
+        "sortino": -3.484740145248771,
+        "max_drawdown": -0.12557848911193814,
+        "calmar": -2.92064657709838,
+        "sharpe_ci95": [
+          -5.927093306224428,
+          0.6751203170805096
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.13379684966894495,
+        "n_fills": 20,
+        "turnover_annual": 40.35793820361565,
+        "fees_paid": 71.46716557900919,
+        "impact_paid": 28.58677938272379,
+        "costs_pct_initial": 0.010005394496173298,
+        "partial_fills": 10,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 340.8263351538062,
+        "avg_loss": -156.20753135784398,
+        "payoff_ratio": 2.1818815788915646,
+        "profit_factor": 0.2424312865435072,
+        "expectancy": -106.50414470667894,
+        "expectancy_pct": -0.022132653687476016,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ema_cross_vol_target": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.08216500614628808,
+        "cagr": -0.29381275354024017,
+        "ann_volatility": 0.123445674735644,
+        "sharpe": -2.7562186949851935,
+        "sortino": -3.581707036237384,
+        "max_drawdown": -0.0979070240030826,
+        "calmar": -3.000936414235096,
+        "sharpe_ci95": [
+          -6.156283476809706,
+          0.53376563366511
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.10185560624673864,
+        "n_fills": 22,
+        "turnover_annual": 31.456278265616483,
+        "fees_paid": 56.18921912265497,
+        "impact_paid": 22.475620780388198,
+        "costs_pct_initial": 0.007866483990304316,
+        "partial_fills": 12,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 275.2926039610942,
+        "avg_loss": -121.88251838044182,
+        "payoff_ratio": 2.258671773599237,
+        "profit_factor": 0.25096353039991526,
+        "expectancy": -82.16500614628823,
+        "expectancy_pct": -0.022460402077628425,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ema_cross_24_168_cost2x": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.11585415654802678,
+        "cagr": -0.39322973116204685,
+        "ann_volatility": 0.1673546674709679,
+        "sharpe": -2.901463371398628,
+        "sortino": -3.7730194526451446,
+        "max_drawdown": -0.1306544279043701,
+        "calmar": -3.009693107759528,
+        "sharpe_ci95": [
+          -6.249345921925751,
+          0.4391473941375586
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.13386554501559048,
+        "n_fills": 20,
+        "turnover_annual": 40.385559589539945,
+        "fees_paid": 142.27291472439373,
+        "impact_paid": 56.90882052021689,
+        "costs_pct_initial": 0.019918173524461062,
+        "partial_fills": 10,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 329.0695630747181,
+        "avg_loss": -165.29012539499797,
+        "payoff_ratio": 1.990860387384499,
+        "profit_factor": 0.2212067097093888,
+        "expectancy": -115.85415654802637,
+        "expectancy_pct": -0.024203721421510328,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 2.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      }
+    },
+    "stress_x2": {
+      "ml_v0_base_h12": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.039926767892487613,
+        "cagr": -0.15238015963284357,
+        "ann_volatility": 0.052735859934836295,
+        "sharpe": -3.108242698601563,
+        "sortino": -3.1996605164397005,
+        "max_drawdown": -0.04335497287139345,
+        "calmar": -3.5147100676284198,
+        "sharpe_ci95": [
+          -6.469449888203232,
+          0.0
+        ],
+        "exposure_time": 0.004629629629629629,
+        "avg_gross_exposure": 0.0023067086670849764,
+        "n_fills": 6,
+        "turnover_annual": 12.11430987608655,
+        "fees_paid": 58.37758734593644,
+        "impact_paid": 17.513159788085428,
+        "costs_pct_initial": 0.007589074713402187,
+        "partial_fills": 3,
+        "n_trades": 3,
+        "win_rate": 0.3333333333333333,
+        "avg_win": 47.91358975617402,
+        "avg_loss": -223.59063434052476,
+        "payoff_ratio": 0.21429157754077674,
+        "profit_factor": 0.10714578877038837,
+        "expectancy": -133.08922630829184,
+        "expectancy_pct": -0.026783551429968716,
+        "avg_bars_held": 3.3333333333333335,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v1_base_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v2_ta_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.012411589321632555,
+        "cagr": 0.05132287029250193,
+        "ann_volatility": 0.04642242065663524,
+        "sharpe": 1.1013228552305347,
+        "sortino": 1.6528918514930315,
+        "max_drawdown": -0.022918805575360968,
+        "calmar": 2.2393344244639417,
+        "sharpe_ci95": [
+          -0.04815067423203685,
+          2.203103533552187
+        ],
+        "exposure_time": 0.01712962962962963,
+        "avg_gross_exposure": 0.008633326238266924,
+        "n_fills": 2,
+        "turnover_annual": 4.1048818921609165,
+        "fees_paid": 20.300658308636162,
+        "impact_paid": 6.090251675039793,
+        "costs_pct_initial": 0.0026390909983675954,
+        "partial_fills": 1,
+        "n_trades": 1,
+        "win_rate": 1.0,
+        "avg_win": 124.11589321632444,
+        "avg_loss": 0.0,
+        "payoff_ratio": NaN,
+        "profit_factor": NaN,
+        "expectancy": 124.11589321632444,
+        "expectancy_pct": 0.024808510356502188,
+        "avg_bars_held": 37.0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v2b_ext_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v3_ta_ext_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v4_meta_ema_h24": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v5_meta_ema_h24_vt": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ml_v6_meta_ema_tb_vt": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": 0.0,
+        "cagr": 0.0,
+        "ann_volatility": 0.0,
+        "sharpe": 0.0,
+        "sortino": 0.0,
+        "max_drawdown": 0.0,
+        "calmar": NaN,
+        "sharpe_ci95": [
+          0.0,
+          0.0
+        ],
+        "exposure_time": 0.0,
+        "avg_gross_exposure": 0.0,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "buy_and_hold": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.013578907470859436,
+        "cagr": -0.053962443562114104,
+        "ann_volatility": 0.3086429605251155,
+        "sharpe": -0.025468377413541896,
+        "sortino": -0.03566905543467175,
+        "max_drawdown": -0.1555910319157625,
+        "calmar": -0.3468223257965764,
+        "sharpe_ci95": [
+          -3.9888682478578223,
+          4.158863901210259
+        ],
+        "exposure_time": 0.999537037037037,
+        "avg_gross_exposure": 0.46889800425366135,
+        "n_fills": 1,
+        "turnover_annual": 2.1579049091096545,
+        "fees_paid": 10.005343531154878,
+        "impact_paid": 2.999803177439321,
+        "costs_pct_initial": 0.0013005146708594201,
+        "partial_fills": 1,
+        "n_trades": 0,
+        "cost_multiplier": 1.0,
+        "stop_loss": false,
+        "risk_engine": false,
+        "open_positions_at_end": {
+          "BTCUSDT": {
+            "qty": 0.10716,
+            "mark": 45510.34
+          }
+        }
+      },
+      "ema_cross_24_168": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.12027108685426502,
+        "cagr": -0.4054351977243761,
+        "ann_volatility": 0.16785379077155846,
+        "sharpe": -3.0133823799609822,
+        "sortino": -3.9065248837476485,
+        "max_drawdown": -0.13306025001663213,
+        "calmar": -3.0470046289083172,
+        "sharpe_ci95": [
+          -6.377838254640873,
+          0.3238382919563898
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.13389751388183313,
+        "n_fills": 20,
+        "turnover_annual": 40.39781799496079,
+        "fees_paid": 189.27530929145513,
+        "impact_paid": 56.78224839224291,
+        "costs_pct_initial": 0.024605755768369805,
+        "partial_fills": 10,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 323.509642417584,
+        "avg_loss": -169.58005677335902,
+        "payoff_ratio": 1.9077104264090994,
+        "profit_factor": 0.2119678251565666,
+        "expectancy": -120.2710868542647,
+        "expectancy_pct": -0.025193103634118447,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ema_cross_vol_target": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.09315418577995949,
+        "cagr": -0.3274961307186991,
+        "ann_volatility": 0.12467446034118504,
+        "sharpe": -3.119798481168397,
+        "sortino": -4.012951026406764,
+        "max_drawdown": -0.1037633234793135,
+        "calmar": -3.1561838975212617,
+        "sharpe_ci95": [
+          -6.652550873312256,
+          0.24016105368328014
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.10190506348862674,
+        "n_fills": 22,
+        "turnover_annual": 31.48159709561925,
+        "fees_paid": 149.01995716642077,
+        "impact_paid": 44.70572153610055,
+        "costs_pct_initial": 0.01937256787025213,
+        "partial_fills": 12,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 261.64551781492315,
+        "avg_loss": -132.5763750682804,
+        "payoff_ratio": 1.9735455708467564,
+        "profit_factor": 0.21928284120519514,
+        "expectancy": -93.15418577996007,
+        "expectancy_pct": -0.02551944481367638,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 1.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      },
+      "ema_cross_24_168_cost2x": {
+        "start": "2022-01-01 00:00:00+00:00",
+        "end": "2022-03-31 23:00:00+00:00",
+        "bars": 2160,
+        "total_return": -0.14293280131589214,
+        "cagr": -0.4651742934082955,
+        "ann_volatility": 0.17095108218133126,
+        "sharpe": -3.575034921089909,
+        "sortino": -4.560854681552699,
+        "max_drawdown": -0.14603133605642016,
+        "calmar": -3.185441604318216,
+        "sharpe_ci95": [
+          -6.980457332856829,
+          -0.19581839422141956
+        ],
+        "exposure_time": 0.26296296296296295,
+        "avg_gross_exposure": 0.1340681218380551,
+        "n_fills": 20,
+        "turnover_annual": 40.464390751728445,
+        "fees_paid": 374.2274941540603,
+        "impact_paid": 112.26689056579559,
+        "costs_pct_initial": 0.04864943847198559,
+        "partial_fills": 10,
+        "n_trades": 10,
+        "win_rate": 0.1,
+        "avg_win": 294.9355152523664,
+        "avg_loss": -191.58483649014326,
+        "payoff_ratio": 1.5394512460151841,
+        "profit_factor": 0.17105013844613157,
+        "expectancy": -142.9328013158923,
+        "expectancy_pct": -0.03031975109616809,
+        "avg_bars_held": 56.8,
+        "cost_multiplier": 2.0,
+        "stop_loss": true,
+        "risk_engine": false,
+        "open_positions_at_end": {}
+      }
+    }
+  },
+  "dsr": {
+    "ml_v0_base_h12": {
+      "dsr": 7.813154269664583e-07,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": 0.008681917433077287
+    },
+    "ml_v1_base_h24": {
+      "dsr": NaN,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": NaN
+    },
+    "ml_v2_ta_h24": {
+      "dsr": 0.20158114481195416,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": 0.7276087967405653
+    },
+    "ml_v2b_ext_h24": {
+      "dsr": NaN,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": NaN
+    },
+    "ml_v3_ta_ext_h24": {
+      "dsr": NaN,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": NaN
+    },
+    "ml_v4_meta_ema_h24": {
+      "dsr": NaN,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": NaN
+    },
+    "ml_v5_meta_ema_h24_vt": {
+      "dsr": NaN,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": NaN
+    },
+    "ml_v6_meta_ema_tb_vt": {
+      "dsr": NaN,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": NaN
+    },
+    "buy_and_hold": {
+      "dsr": 0.07404205169218593,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": 0.4966283532885265
+    },
+    "ema_cross_24_168": {
+      "dsr": 0.0024119364105042833,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": 0.08615374378658319
+    },
+    "ema_cross_vol_target": {
+      "dsr": 0.0019859430095435014,
+      "sr0": 0.03095254874472552,
+      "n_trials": 27,
+      "psr": 0.0778437137427581
+    }
+  },
+  "bootstrap": {
+    "ml_v0_base_h12": {
+      "buy_and_hold": {
+        "diff": -2.8259175382176074,
+        "lo": -8.015026648045243,
+        "hi": 1.3084764494064547
+      },
+      "ema_cross_vol_target": {
+        "diff": -0.027131550103431046,
+        "lo": -4.0749228896427985,
+        "hi": 4.195061140509485
+      }
+    },
+    "ml_v1_base_h24": {
+      "buy_and_hold": {
+        "diff": 0.017027969369228273,
+        "lo": -3.9802077292227853,
+        "hi": 4.051704067920018
+      },
+      "ema_cross_vol_target": {
+        "diff": 2.8158139574834045,
+        "lo": -0.623912937905971,
+        "hi": 6.417101952854129
+      }
+    },
+    "ml_v2_ta_h24": {
+      "buy_and_hold": {
+        "diff": 1.2340326900331582,
+        "lo": -3.3724648307535663,
+        "hi": 5.228673220227261
+      },
+      "ema_cross_vol_target": {
+        "diff": 4.0328186781473345,
+        "lo": -0.2640932080265017,
+        "hi": 8.190147485874736
+      }
+    },
+    "ml_v2b_ext_h24": {
+      "buy_and_hold": {
+        "diff": 0.017027969369228273,
+        "lo": -3.9802077292227853,
+        "hi": 4.051704067920018
+      },
+      "ema_cross_vol_target": {
+        "diff": 2.8158139574834045,
+        "lo": -0.623912937905971,
+        "hi": 6.417101952854129
+      }
+    },
+    "ml_v3_ta_ext_h24": {
+      "buy_and_hold": {
+        "diff": 0.017027969369228273,
+        "lo": -3.9802077292227853,
+        "hi": 4.051704067920018
+      },
+      "ema_cross_vol_target": {
+        "diff": 2.8158139574834045,
+        "lo": -0.623912937905971,
+        "hi": 6.417101952854129
+      }
+    },
+    "ml_v4_meta_ema_h24": {
+      "buy_and_hold": {
+        "diff": 0.017027969369228273,
+        "lo": -3.9802077292227853,
+        "hi": 4.051704067920018
+      },
+      "ema_cross_vol_target": {
+        "diff": 2.8158139574834045,
+        "lo": -0.623912937905971,
+        "hi": 6.417101952854129
+      }
+    },
+    "ml_v5_meta_ema_h24_vt": {
+      "buy_and_hold": {
+        "diff": 0.017027969369228273,
+        "lo": -3.9802077292227853,
+        "hi": 4.051704067920018
+      },
+      "ema_cross_vol_target": {
+        "diff": 2.8158139574834045,
+        "lo": -0.623912937905971,
+        "hi": 6.417101952854129
+      }
+    },
+    "ml_v6_meta_ema_tb_vt": {
+      "buy_and_hold": {
+        "diff": 0.017027969369228273,
+        "lo": -3.9802077292227853,
+        "hi": 4.051704067920018
+      },
+      "ema_cross_vol_target": {
+        "diff": 2.8158139574834045,
+        "lo": -0.623912937905971,
+        "hi": 6.417101952854129
+      }
+    }
+  },
+  "gate": {
+    "ml_v0_base_h12": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR 0.0 < 0.95",
+        "Sharpe -2.84 <= buy_and_hold -0.02",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -8.02)",
+        "Sharpe -2.84 <= ema_cross_vol_target -2.82",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -4.07)",
+        "retorno con estrés de costes <= 0"
+      ]
+    },
+    "ml_v1_base_h24": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR no disponible < 0.95",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -3.98)",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -0.62)",
+        "retorno con estrés de costes <= 0"
+      ]
+    },
+    "ml_v2_ta_h24": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR 0.202 < 0.95",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -3.37)",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -0.26)"
+      ]
+    },
+    "ml_v2b_ext_h24": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR no disponible < 0.95",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -3.98)",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -0.62)",
+        "retorno con estrés de costes <= 0"
+      ]
+    },
+    "ml_v3_ta_ext_h24": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR no disponible < 0.95",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -3.98)",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -0.62)",
+        "retorno con estrés de costes <= 0"
+      ]
+    },
+    "ml_v4_meta_ema_h24": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR no disponible < 0.95",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -3.98)",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -0.62)",
+        "retorno con estrés de costes <= 0"
+      ]
+    },
+    "ml_v5_meta_ema_h24_vt": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR no disponible < 0.95",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -3.98)",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -0.62)",
+        "retorno con estrés de costes <= 0"
+      ]
+    },
+    "ml_v6_meta_ema_tb_vt": {
+      "passed": false,
+      "reasons": [
+        "evaluación incompleta (prueba mínima o folds limitados)",
+        "DSR no disponible < 0.95",
+        "IC95 % de la ventaja de Sharpe frente a buy_and_hold incluye 0 (inferior -3.98)",
+        "IC95 % de la ventaja de Sharpe frente a ema_cross_vol_target incluye 0 (inferior -0.62)",
+        "retorno con estrés de costes <= 0"
+      ]
+    }
+  },
+  "n_trials_cumulative": 27,
+  "classification": {
+    "v0_base_h12:BTCUSDT": {
+      "n": 2160,
+      "base_rate": 0.41435185185185186,
+      "precision": 0.43125,
+      "recall": 0.07709497206703911,
+      "f1": 0.13080568720379146,
+      "balanced_accuracy": 0.5025791065868792,
+      "brier": 0.24177624051394497,
+      "brier_baseline": 0.2426643947187928,
+      "log_loss": 0.676545728852832,
+      "auc": 0.5585337955704728,
+      "precision_at_enter": 0.3333333333333333,
+      "coverage_at_enter": 0.004166666666666667
+    },
+    "v1_base_h24:BTCUSDT": {
+      "n": 2160,
+      "base_rate": 0.4550925925925926,
+      "precision": 0.36585365853658536,
+      "recall": 0.0762970498474059,
+      "f1": 0.12626262626262627,
+      "balanced_accuracy": 0.4829233762406104,
+      "brier": 0.24879485429121492,
+      "brier_baseline": 0.2479833247599451,
+      "log_loss": 0.6907338220382203,
+      "auc": 0.5185373092789831,
+      "precision_at_enter": null,
+      "coverage_at_enter": 0.0
+    },
+    "v2_ta_h24:BTCUSDT": {
+      "n": 2160,
+      "base_rate": 0.4550925925925926,
+      "precision": 0.4444444444444444,
+      "recall": 0.08138351983723296,
+      "f1": 0.13757523645743766,
+      "balanced_accuracy": 0.4982108763162375,
+      "brier": 0.24879691614362848,
+      "brier_baseline": 0.2479833247599451,
+      "log_loss": 0.6907286073729552,
+      "auc": 0.490879358612124,
+      "precision_at_enter": 1.0,
+      "coverage_at_enter": 0.000462962962962963
+    },
+    "v2b_ext_h24:BTCUSDT": {
+      "n": 2160,
+      "base_rate": 0.4550925925925926,
+      "precision": 0.3588516746411483,
+      "recall": 0.0762970498474059,
+      "f1": 0.12583892617449666,
+      "balanced_accuracy": 0.4812241408965152,
+      "brier": 0.2488417222963251,
+      "brier_baseline": 0.2479833247599451,
+      "log_loss": 0.6908282582121705,
+      "auc": 0.5182252930230227,
+      "precision_at_enter": null,
+      "coverage_at_enter": 0.0
+    },
+    "v3_ta_ext_h24:BTCUSDT": {
+      "n": 2160,
+      "base_rate": 0.4550925925925926,
+      "precision": 0.4934210526315789,
+      "recall": 0.0762970498474059,
+      "f1": 0.13215859030837004,
+      "balanced_accuracy": 0.5054382445498712,
+      "brier": 0.24876319267876737,
+      "brier_baseline": 0.2479833247599451,
+      "log_loss": 0.6906625004118283,
+      "auc": 0.4909078808737492,
+      "precision_at_enter": null,
+      "coverage_at_enter": 0.0
+    },
+    "v4_meta_ema_h24:BTCUSDT": {
+      "n": 989,
+      "base_rate": 0.40546006066734075,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "brier": 0.24303544345190814,
+      "brier_baseline": 0.24106219987097713,
+      "log_loss": 0.6791642541408562,
+      "auc": 0.48015166166217116,
+      "precision_at_enter": null,
+      "coverage_at_enter": 0.0
+    },
+    "v5_meta_ema_h24_vt:BTCUSDT": {
+      "n": 989,
+      "base_rate": 0.40546006066734075,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "brier": 0.24303544345190814,
+      "brier_baseline": 0.24106219987097713,
+      "log_loss": 0.6791642541408562,
+      "auc": 0.48015166166217116,
+      "precision_at_enter": null,
+      "coverage_at_enter": 0.0
+    },
+    "v6_meta_ema_tb_vt:BTCUSDT": {
+      "n": 989,
+      "base_rate": 0.4084934277047523,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5,
+      "brier": 0.24294075861418526,
+      "brier_baseline": 0.24162654722677462,
+      "log_loss": 0.6789821021875574,
+      "auc": 0.4988068037572988,
+      "precision_at_enter": null,
+      "coverage_at_enter": 0.0
+    }
+  },
+  "folds": [
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 27643,
+      "n_calib": 6914,
+      "n_test": 2160,
+      "fit_start": "2018-01-01 00:00:00+00:00",
+      "fit_end": "2021-03-14 04:00:00+00:00",
+      "calib_end": "2021-12-30 10:00:00+00:00",
+      "seconds": 2.37,
+      "variant": "v0_base_h12"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 27372,
+      "n_calib": 6849,
+      "n_test": 2160,
+      "fit_start": "2018-01-01 00:00:00+00:00",
+      "fit_end": "2021-03-13 21:00:00+00:00",
+      "calib_end": "2021-12-29 22:00:00+00:00",
+      "seconds": 2.26,
+      "variant": "v1_base_h24"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 27372,
+      "n_calib": 6849,
+      "n_test": 2160,
+      "fit_start": "2018-01-01 00:00:00+00:00",
+      "fit_end": "2021-03-13 21:00:00+00:00",
+      "calib_end": "2021-12-29 22:00:00+00:00",
+      "seconds": 3.67,
+      "variant": "v2_ta_h24"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 27372,
+      "n_calib": 6849,
+      "n_test": 2160,
+      "fit_start": "2018-01-01 00:00:00+00:00",
+      "fit_end": "2021-03-13 21:00:00+00:00",
+      "calib_end": "2021-12-29 22:00:00+00:00",
+      "seconds": 5.34,
+      "variant": "v2b_ext_h24"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 27372,
+      "n_calib": 6849,
+      "n_test": 2160,
+      "fit_start": "2018-01-01 00:00:00+00:00",
+      "fit_end": "2021-03-13 21:00:00+00:00",
+      "calib_end": "2021-12-29 22:00:00+00:00",
+      "seconds": 4.63,
+      "variant": "v3_ta_ext_h24"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 14515,
+      "n_calib": 3635,
+      "n_test": 2160,
+      "fit_start": "2018-01-08 00:00:00+00:00",
+      "fit_end": "2021-02-21 19:00:00+00:00",
+      "calib_end": "2021-12-28 12:00:00+00:00",
+      "seconds": 3.13,
+      "variant": "v4_meta_ema_h24"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 14515,
+      "n_calib": 3635,
+      "n_test": 2160,
+      "fit_start": "2018-01-08 00:00:00+00:00",
+      "fit_end": "2021-02-21 19:00:00+00:00",
+      "calib_end": "2021-12-28 12:00:00+00:00",
+      "seconds": 6.3,
+      "variant": "v5_meta_ema_h24_vt"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "fold": 0,
+      "test_start": "2022-01-01 00:00:00+00:00",
+      "test_end": "2022-04-01 00:00:00+00:00",
+      "n_fit": 14749,
+      "n_calib": 3691,
+      "n_test": 2160,
+      "fit_start": "2018-01-08 00:00:00+00:00",
+      "fit_end": "2021-02-20 21:00:00+00:00",
+      "calib_end": "2021-12-28 12:00:00+00:00",
+      "seconds": 3.2,
+      "variant": "v6_meta_ema_tb_vt"
+    }
+  ],
+  "v2_config": {
+    "test_start": "2022-01-01",
+    "variants": {
+      "v0_base_h12": {
+        "features": [
+          "base"
+        ],
+        "horizon": 12,
+        "label": "forward",
+        "primary": "none",
+        "sizing": "fixed"
+      },
+      "v1_base_h24": {
+        "features": [
+          "base"
+        ],
+        "horizon": 24,
+        "label": "forward",
+        "primary": "none",
+        "sizing": "fixed"
+      },
+      "v2_ta_h24": {
+        "features": [
+          "base",
+          "ta"
+        ],
+        "horizon": 24,
+        "label": "forward",
+        "primary": "none",
+        "sizing": "fixed"
+      },
+      "v2b_ext_h24": {
+        "features": [
+          "base",
+          "ext"
+        ],
+        "horizon": 24,
+        "label": "forward",
+        "primary": "none",
+        "sizing": "fixed"
+      },
+      "v3_ta_ext_h24": {
+        "features": [
+          "base",
+          "ta",
+          "ext"
+        ],
+        "horizon": 24,
+        "label": "forward",
+        "primary": "none",
+        "sizing": "fixed"
+      },
+      "v4_meta_ema_h24": {
+        "features": [
+          "base",
+          "ta",
+          "ext"
+        ],
+        "horizon": 24,
+        "label": "forward",
+        "primary": "ema_cross",
+        "sizing": "fixed"
+      },
+      "v5_meta_ema_h24_vt": {
+        "features": [
+          "base",
+          "ta",
+          "ext"
+        ],
+        "horizon": 24,
+        "label": "forward",
+        "primary": "ema_cross",
+        "sizing": "vol_target"
+      },
+      "v6_meta_ema_tb_vt": {
+        "features": [
+          "base",
+          "ta",
+          "ext"
+        ],
+        "horizon": 24,
+        "label": "triple_barrier",
+        "primary": "ema_cross",
+        "sizing": "vol_target"
+      }
+    },
+    "triple_barrier": {
+      "pt_atr_mult": 3.0,
+      "sl_atr_mult": 3.0,
+      "max_bars": 24
+    },
+    "rule_benchmarks": [
+      "buy_and_hold",
+      "ema_cross_24_168",
+      "ema_cross_vol_target"
+    ],
+    "sizing": {
+      "vol_target_annual": 0.3,
+      "max_weight": 0.5
+    },
+    "cost_scenarios": {
+      "taker_base": {
+        "fee_bps": 10.0,
+        "half_spread_bps": 1.0,
+        "slippage_bps": 2.0
+      },
+      "taker_bnb": {
+        "fee_bps": 7.5,
+        "half_spread_bps": 1.0,
+        "slippage_bps": 2.0
+      },
+      "stress_x2": {
+        "fee_bps": 20.0,
+        "half_spread_bps": 2.0,
+        "slippage_bps": 4.0
+      }
+    },
+    "gate": {
+      "min_dsr": 0.95,
+      "must_beat": [
+        "buy_and_hold",
+        "ema_cross_vol_target"
+      ],
+      "bootstrap_block": 168,
+      "max_drawdown_not_worse_than": "buy_and_hold",
+      "positive_under": "stress_x2"
+    }
+  },
+  "config": {
+    "project": {
+      "name": "quant-ai",
+      "mode": "paper",
+      "seed": 42
+    },
+    "compute": {
+      "n_jobs": -1
+    },
+    "market": {
+      "exchange": "binance",
+      "symbols": [
+        "BTCUSDT"
+      ],
+      "interval": "1h",
+      "history_start": "2018-01-01"
+    },
+    "splits": {
+      "final_holdout_start": "2025-11-01",
+      "walk_forward": {
+        "first_test_start": "2020-01-01",
+        "test_months": 3,
+        "min_train_months": 18,
+        "expanding": true,
+        "calibration_fraction": 0.2
+      },
+      "embargo_bars": 24
+    },
+    "costs": {
+      "fee_bps": 10.0,
+      "half_spread_bps": 1.0,
+      "slippage_bps": 2.0,
+      "max_participation": 0.01
+    },
+    "instrument_rules": {
+      "BTCUSDT": {
+        "lot_step": 1e-05,
+        "min_notional": 5.0,
+        "tick_size": 0.01
+      },
+      "ETHUSDT": {
+        "lot_step": 0.0001,
+        "min_notional": 5.0,
+        "tick_size": 0.01
+      }
+    },
+    "labeling": {
+      "method": "forward_net_return",
+      "horizon_bars": 12,
+      "cost_threshold_bps": 26.0,
+      "triple_barrier": {
+        "pt_atr_mult": 2.0,
+        "sl_atr_mult": 1.5,
+        "max_bars": 24
+      }
+    },
+    "features": {
+      "windows": [
+        6,
+        12,
+        24,
+        72,
+        168
+      ],
+      "include_cross_asset": true,
+      "include_calendar": true
+    },
+    "strategy": {
+      "enter_prob": 0.55,
+      "exit_prob": 0.45,
+      "max_uncertainty": 0.15,
+      "target_weight": 0.5,
+      "atr_stop_mult": 3.0
+    },
+    "backtest": {
+      "initial_cash": 10000.0,
+      "annualization_bars": 8760
+    },
+    "risk": {
+      "max_order_pct_equity": 0.55,
+      "max_order_notional": 20000.0,
+      "max_position_weight": 0.5,
+      "max_gross_exposure": 1.0,
+      "max_daily_loss_pct": 0.03,
+      "max_drawdown_pct": 0.15,
+      "max_data_age_minutes": 90,
+      "max_volatility_pct": 0.04,
+      "ood_zscore": 6.0,
+      "ood_max_features": 3,
+      "max_api_errors": 5,
+      "kill_switch_file": "KILL_SWITCH"
+    },
+    "paths": {
+      "data_dir": "data",
+      "models_dir": "models",
+      "reports_dir": "reports",
+      "state_dir": "state"
+    }
+  },
+  "seconds": 40.5
+}

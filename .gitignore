@@ -1,0 +1,35 @@
+# Datos, modelos y resultados pesados: fuera de Git (se versionan por manifiesto)
+/data/
+/models/
+/experiments/
+/reports/runs/*/*
+/state/
+*.parquet
+*.joblib
+*.pt
+*.ckpt
+
+# Secretos
+.env
+*.key
+
+# Kill switch local
+KILL_SWITCH
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+
+# Resultados exportados de Colab/Kaggle (ZIP pesados; lo importante vive en reports/)
+/resultados/
+
+# De cada corrida solo se versionan el reporte y su resumen
+!/reports/runs/*/report.md
+!/reports/runs/*/summary.json

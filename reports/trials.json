@@ -1,0 +1,373 @@
+{
+  "n_trials": 30,
+  "trials": {
+    "estrategia:buy_and_hold": {
+      "kind": "estrategia",
+      "name": "buy_and_hold",
+      "sharpe_annual": 0.5243231072546589,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261108T232220Z_baselines",
+        "20261108T232302Z_baselines",
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z",
+        "20261109T133347Z_v2smoke",
+        "20261109T133748Z_v2smoke_ta",
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final",
+        "chart_cnn_w48",
+        "secuencias_v1/gru",
+        "secuencias_v1/tcn",
+        "secuencias_v2/gru",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:trend_ema": {
+      "kind": "estrategia",
+      "name": "trend_ema",
+      "sharpe_annual": -1.2968796295469667,
+      "sharpe_source": "20261108T232220Z_baselines",
+      "sources": [
+        "20261108T232220Z_baselines"
+      ]
+    },
+    "estrategia:tsmom_168": {
+      "kind": "estrategia",
+      "name": "tsmom_168",
+      "sharpe_annual": 0.5555721162766604,
+      "sharpe_source": "20261109T015000Z",
+      "sources": [
+        "20261108T232220Z_baselines",
+        "20261108T232302Z_baselines",
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z",
+        "chart_cnn_w48",
+        "secuencias_v1/gru",
+        "secuencias_v1/tcn",
+        "secuencias_v2/gru",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:rsi_reversion": {
+      "kind": "estrategia",
+      "name": "rsi_reversion",
+      "sharpe_annual": -0.23697711838673474,
+      "sharpe_source": "20261109T015000Z",
+      "sources": [
+        "20261108T232220Z_baselines",
+        "20261108T232302Z_baselines",
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z",
+        "chart_cnn_w48",
+        "secuencias_v1/gru",
+        "secuencias_v1/tcn",
+        "secuencias_v2/gru",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:price_above_ema_fast": {
+      "kind": "estrategia",
+      "name": "price_above_ema_fast",
+      "sharpe_annual": -1.2968796295469667,
+      "sharpe_source": "20261109T015000Z",
+      "sources": [
+        "20261108T232302Z_baselines",
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z",
+        "chart_cnn_w48",
+        "secuencias_v1/gru",
+        "secuencias_v1/tcn",
+        "secuencias_v2/gru",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:ema_cross_24_168": {
+      "kind": "estrategia",
+      "name": "ema_cross_24_168",
+      "sharpe_annual": -0.05415354234143065,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261108T232302Z_baselines",
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z",
+        "20261109T133347Z_v2smoke",
+        "20261109T133748Z_v2smoke_ta",
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final",
+        "chart_cnn_w48",
+        "secuencias_v1/gru",
+        "secuencias_v1/tcn",
+        "secuencias_v2/gru",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:ml_logistic": {
+      "kind": "estrategia",
+      "name": "ml_logistic",
+      "sharpe_annual": 0.7643199030841975,
+      "sharpe_source": "20261109T015000Z",
+      "sources": [
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z"
+      ]
+    },
+    "estrategia:ml_lightgbm": {
+      "kind": "estrategia",
+      "name": "ml_lightgbm",
+      "sharpe_annual": 0.8476556869089203,
+      "sharpe_source": "20261109T015000Z",
+      "sources": [
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z"
+      ]
+    },
+    "estrategia:ml_ensemble": {
+      "kind": "estrategia",
+      "name": "ml_ensemble",
+      "sharpe_annual": 0.7174300471529509,
+      "sharpe_source": "20261109T015000Z",
+      "sources": [
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z",
+        "chart_cnn_w48",
+        "secuencias_v1/gru",
+        "secuencias_v1/tcn",
+        "secuencias_v2/gru",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:ml_ensemble_risk": {
+      "kind": "estrategia",
+      "name": "ml_ensemble_risk",
+      "sharpe_annual": 0.879849510736061,
+      "sharpe_source": "20261109T015000Z",
+      "sources": [
+        "20261108T232406Z_smoke",
+        "20261108T232548Z_full",
+        "20261109T015000Z",
+        "chart_cnn_w48",
+        "secuencias_v1/gru",
+        "secuencias_v1/tcn",
+        "secuencias_v2/gru",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:ml_v0_base_h12": {
+      "kind": "estrategia",
+      "name": "ml_v0_base_h12",
+      "sharpe_annual": -0.11662125222802179,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261109T133347Z_v2smoke",
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ml_v1_base_h24": {
+      "kind": "estrategia",
+      "name": "ml_v1_base_h24",
+      "sharpe_annual": 0.6541126859894633,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261109T133347Z_v2smoke",
+        "20261109T133748Z_v2smoke_ta",
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ema_cross_vol_target": {
+      "kind": "estrategia",
+      "name": "ema_cross_vol_target",
+      "sharpe_annual": -0.007724125689459492,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261109T133347Z_v2smoke",
+        "20261109T133748Z_v2smoke_ta",
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ml_v2_ta_h24": {
+      "kind": "estrategia",
+      "name": "ml_v2_ta_h24",
+      "sharpe_annual": 0.49717900510090235,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261109T133748Z_v2smoke_ta",
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ml_v2b_ext_h24": {
+      "kind": "estrategia",
+      "name": "ml_v2b_ext_h24",
+      "sharpe_annual": 0.19367847185905912,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ml_v3_ta_ext_h24": {
+      "kind": "estrategia",
+      "name": "ml_v3_ta_ext_h24",
+      "sharpe_annual": 0.6899522531214767,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ml_v4_meta_ema_h24": {
+      "kind": "estrategia",
+      "name": "ml_v4_meta_ema_h24",
+      "sharpe_annual": 0.13126899016459656,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ml_v5_meta_ema_h24_vt": {
+      "kind": "estrategia",
+      "name": "ml_v5_meta_ema_h24_vt",
+      "sharpe_annual": 0.20728403628061706,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:ml_v6_meta_ema_tb_vt": {
+      "kind": "estrategia",
+      "name": "ml_v6_meta_ema_tb_vt",
+      "sharpe_annual": -0.11417731115196057,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T031705Z_v2_smoke_colab",
+        "20261110T105533Z_v2",
+        "20261110T120156Z_v2final"
+      ]
+    },
+    "estrategia:dl_v2_gru": {
+      "kind": "estrategia",
+      "name": "dl_v2_gru",
+      "sharpe_annual": -0.10772121721513213,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T120156Z_v2final",
+        "secuencias_v2/gru"
+      ]
+    },
+    "estrategia:dl_v2_tcn": {
+      "kind": "estrategia",
+      "name": "dl_v2_tcn",
+      "sharpe_annual": 0.19566062727566805,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T120156Z_v2final",
+        "secuencias_v2/tcn"
+      ]
+    },
+    "estrategia:dl_chart_cnn_w48": {
+      "kind": "estrategia",
+      "name": "dl_chart_cnn_w48",
+      "sharpe_annual": -1.2048828029271503,
+      "sharpe_source": "20261110T120156Z_v2final",
+      "sources": [
+        "20261110T120156Z_v2final",
+        "chart_cnn_w48"
+      ]
+    },
+    "estrategia:secuencias_v1/gru:dl_gru": {
+      "kind": "estrategia",
+      "name": "secuencias_v1/gru:dl_gru",
+      "sharpe_annual": 1.364975410634539,
+      "sharpe_source": "secuencias_v1/gru",
+      "sources": [
+        "secuencias_v1/gru"
+      ]
+    },
+    "estrategia:secuencias_v1/tcn:dl_tcn": {
+      "kind": "estrategia",
+      "name": "secuencias_v1/tcn:dl_tcn",
+      "sharpe_annual": 1.4559024589154526,
+      "sharpe_source": "secuencias_v1/tcn",
+      "sources": [
+        "secuencias_v1/tcn"
+      ]
+    },
+    "rl:rl_v1_ppo_BTCUSDT:seed0": {
+      "kind": "rl",
+      "name": "rl_v1_ppo_BTCUSDT:seed0",
+      "sharpe_annual": -1.4898918965227872,
+      "sharpe_source": "rl_v1_ppo_BTCUSDT",
+      "sources": [
+        "rl_v1_ppo_BTCUSDT"
+      ]
+    },
+    "rl:rl_v1_ppo_BTCUSDT:seed1": {
+      "kind": "rl",
+      "name": "rl_v1_ppo_BTCUSDT:seed1",
+      "sharpe_annual": 0.2701385538874156,
+      "sharpe_source": "rl_v1_ppo_BTCUSDT",
+      "sources": [
+        "rl_v1_ppo_BTCUSDT"
+      ]
+    },
+    "rl:rl_v1_ppo_BTCUSDT:seed2": {
+      "kind": "rl",
+      "name": "rl_v1_ppo_BTCUSDT:seed2",
+      "sharpe_annual": -0.7724965175396297,
+      "sharpe_source": "rl_v1_ppo_BTCUSDT",
+      "sources": [
+        "rl_v1_ppo_BTCUSDT"
+      ]
+    },
+    "rl:rl_v1_ppo_ETHUSDT:seed0": {
+      "kind": "rl",
+      "name": "rl_v1_ppo_ETHUSDT:seed0",
+      "sharpe_annual": -1.4652758459655297,
+      "sharpe_source": "rl_v1_ppo_ETHUSDT",
+      "sources": [
+        "rl_v1_ppo_ETHUSDT"
+      ]
+    },
+    "rl:rl_v1_ppo_ETHUSDT:seed1": {
+      "kind": "rl",
+      "name": "rl_v1_ppo_ETHUSDT:seed1",
+      "sharpe_annual": -2.053550761880883,
+      "sharpe_source": "rl_v1_ppo_ETHUSDT",
+      "sources": [
+        "rl_v1_ppo_ETHUSDT"
+      ]
+    },
+    "rl:rl_v1_ppo_ETHUSDT:seed2": {
+      "kind": "rl",
+      "name": "rl_v1_ppo_ETHUSDT:seed2",
+      "sharpe_annual": -1.0012869081582993,
+      "sharpe_source": "rl_v1_ppo_ETHUSDT",
+      "sources": [
+        "rl_v1_ppo_ETHUSDT"
+      ]
+    }
+  }
+}

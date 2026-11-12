@@ -1,0 +1,91 @@
+# Configuración base de QUANT-AI.
+# Todo lo marcado como PRE-REGISTRADO se fijó el 2026-11-08 ANTES de ejecutar cualquier experimento.
+# Cambiarlo después de ver resultados del holdout invalida la evaluación final.
+
+project:
+  name: quant-ai
+  mode: paper            # backtest | paper | live  (live bloqueado por código)
+  seed: 42
+
+compute:
+  # Hilos de CPU para LightGBM/sklearn. En local se limita para no saturar el PC;
+  # en Colab el notebook lo sube con override (n_jobs: -1). No cambia los resultados.
+  n_jobs: 2
+
+market:
+  exchange: binance
+  symbols: [BTCUSDT, ETHUSDT]
+  interval: 1h
+  history_start: "2018-01-01"   # ambos pares existen en Binance spot desde 2017-08
+
+splits:
+  # PRE-REGISTRADO. Datos desde final_holdout_start en adelante: prohibidos para diseño/selección.
+  # Solo se evalúan con la bandera --final (scripts/run_experiments.py --final).
+  final_holdout_start: "2025-11-01"
+  # Walk-forward dentro del periodo de desarrollo (antes del holdout)
+  walk_forward:
+    first_test_start: "2020-01-01"
+    test_months: 3
+    min_train_months: 18
+    expanding: true
+    calibration_fraction: 0.2     # último 20 % del train (cronológico) para calibrar probabilidades
+  embargo_bars: 24
+
+costs:
+  # Binance spot nivel básico (VIP0): 0,10 % maker/taker (verificar en docs/research). Sin descuento BNB.
+  fee_bps: 10.0
+  half_spread_bps: 1.0      # BTC/ETH tienen spread muy estrecho; valor conservador
+  slippage_bps: 2.0
+  max_participation: 0.01   # máximo 1 % del volumen de la vela; el resto queda sin ejecutar (fill parcial)
+
+instrument_rules:
+  # Reglas aproximadas de Binance spot (exchangeInfo). Se refrescan desde la API en modo paper.
+  BTCUSDT: {lot_step: 0.00001, min_notional: 5.0, tick_size: 0.01}
+  ETHUSDT: {lot_step: 0.0001, min_notional: 5.0, tick_size: 0.01}
+
+labeling:
+  # PRE-REGISTRADO
+  method: forward_net_return      # forward_net_return | triple_barrier
+  horizon_bars: 12                # entrada en open[t+1], salida en open[t+1+h]
+  cost_threshold_bps: 26.0        # ida y vuelta: 2*(fee + half_spread + slippage)
+  triple_barrier:
+    pt_atr_mult: 2.0
+    sl_atr_mult: 1.5
+    max_bars: 24
+
+features:
+  windows: [6, 12, 24, 72, 168]
+  include_cross_asset: true
+  include_calendar: true
+
+strategy:
+  # PRE-REGISTRADO: umbrales fijos, NO se optimizan sobre los folds de prueba.
+  enter_prob: 0.55        # probabilidad calibrada mínima de superar costes para entrar
+  exit_prob: 0.45         # histéresis: salir cuando cae por debajo
+  max_uncertainty: 0.15   # desviación entre modelos del ensemble; por encima -> abstenerse
+  target_weight: 0.5      # fracción del capital asignada por activo cuando hay señal
+  atr_stop_mult: 3.0      # stop-loss protector = entrada - k*ATR
+
+backtest:
+  initial_cash: 10000.0
+  annualization_bars: 8760   # velas de 1h en un año (mercado 24/7)
+
+risk:
+  max_order_pct_equity: 0.55     # nocional máximo por orden como fracción del capital
+  max_order_notional: 20000.0    # tope absoluto (protección ante errores de tamaño)
+  max_position_weight: 0.5      # por activo
+  max_gross_exposure: 1.0       # sin apalancamiento
+  max_daily_loss_pct: 0.03
+  max_drawdown_pct: 0.15
+  max_data_age_minutes: 90      # datos más viejos que esto -> bloquear
+  max_volatility_pct: 0.04      # volatilidad horaria realizada (24h) máxima para abrir posiciones
+  ood_zscore: 6.0               # característica fuera de distribución -> bloquear
+  ood_max_features: 3
+  max_api_errors: 5
+  kill_switch_file: KILL_SWITCH
+
+paths:
+  data_dir: data
+  models_dir: models
+  reports_dir: reports
+  state_dir: state

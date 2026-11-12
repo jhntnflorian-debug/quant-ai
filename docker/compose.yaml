@@ -1,0 +1,14 @@
+# Despliegue mínimo en un VPS: proceso paper 24/7 + dashboard solo en localhost (usar túnel SSH).
+services:
+  paper:
+    build: {context: .., dockerfile: docker/Dockerfile}
+    restart: unless-stopped
+    environment: [QUANT_AI_MODE=paper]
+    env_file: [{path: ../.env, required: false}]   # claves del testnet (opcional)
+    volumes: ["../data:/app/data", "../models:/app/models", "../state:/app/state", "../reports:/app/reports"]
+  dashboard:
+    build: {context: .., dockerfile: docker/Dockerfile}
+    restart: unless-stopped
+    command: ["streamlit", "run", "dashboard/app.py", "--server.address", "0.0.0.0", "--server.port", "8501", "--server.headless", "true"]
+    ports: ["127.0.0.1:8501:8501"]
+    volumes: ["../data:/app/data:ro", "../models:/app/models:ro", "../state:/app/state:ro", "../reports:/app/reports:ro"]
